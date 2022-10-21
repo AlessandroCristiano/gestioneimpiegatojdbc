@@ -11,7 +11,7 @@ public class Impiegato {
 	private String codiceFiscale;
 	private Date dataNascita;
 	private Date dataAssunzione;
-	private List<Compagnia> compagnie;
+	private Compagnia compagnia;
 	
 	
 	public Impiegato() {
@@ -31,7 +31,7 @@ public class Impiegato {
 
 
 	public Impiegato(Long id, String nome, String cognome, String codiceFiscale, Date dataNascita, Date dataAssunzione,
-			List<Compagnia> compagnie) {
+			Compagnia compagnia) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -39,7 +39,7 @@ public class Impiegato {
 		this.codiceFiscale = codiceFiscale;
 		this.dataNascita = dataNascita;
 		this.dataAssunzione = dataAssunzione;
-		this.compagnie = compagnie;
+		this.compagnia = compagnia;
 	}
 
 	public Long getId() {
@@ -90,12 +90,12 @@ public class Impiegato {
 		this.dataAssunzione = dataAssunzione;
 	}
 
-	public List<Compagnia> getCompagnie() {
-		return compagnie;
+	public Compagnia getCompagnie() {
+		return compagnia;
 	}
 
-	public void setCompagnie(List<Compagnia> compagnie) {
-		this.compagnie = compagnie;
+	public void setCompagnie(Compagnia compagnia) {
+		this.compagnia = compagnia;
 	}
 
 	
@@ -106,7 +106,7 @@ public class Impiegato {
 		String dateAssunzioneString = dataAssunzione != null ? new SimpleDateFormat("dd/MM/yyyy").format(dataAssunzione)
 				: " N.D.";
 		return "Impiegato [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", codiceFiscale=" + codiceFiscale
-				+ ", dataNascita=" + dateNascitaString + ", dataAssunzione=" + dateAssunzioneString + ", compagnie=" + compagnie
+				+ ", dataNascita=" + dateNascitaString + ", dataAssunzione=" + dateAssunzioneString + ", compagnie=" + compagnia
 				+ "]";
 	}
 }
